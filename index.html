@@ -2,21 +2,23 @@
 <head >
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link>
 </head>    
 <body>
 <title>מחווה לסבתא</title>
 <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#myphotos">My Photos</a></li>
-    <li><a href="#myplaylist">My Playlist</a></li>
-    <li><a href="#like">Like</a></li>
-    <li><a href="#qrcode">QR Code</a></li>
-    <li><a href="#qanda">Q&A</a></li>
-    <li><a href="#contactme">Contact Me</a></li>
-</ul>
+    <li class="#mylink"><a href="#about">About Me</a></li>
+    <li class="#mylink"><a href="#myphotos">My Photos</a></li>
+    <li class="#mylink"><a href="#myplaylist">My Playlist</a></li>
+    <li class="#mylink"><a href="#like">Like</a></li>
+    <li class="#mylink"><a href="#qrcode">QR Code</a></li>
+    <li class="#mylink"><a href="#qanda">Q&A</a></li>
+    <li class="#mylink"><a href="#contactme">Contact Me</a></li>
+    <li style="float:right"><a href="#logo">מחווה לסבתא</a></li>
+  </ul>
 <h1>space</h1>
 <h1><a name="about">About Me</a></h1>
-<p>סבתא שלי נולדה בלוב  בשנת 1932. היא עלתה לארץ בשנות החמישים וגרה בקיבוץ. לאחר שדודתי נולדה, היא עברה לרמת גן שם אמא שלי נולדה. סבתר שלי מאוד אוהבת לבשל, לאכול במסעדות טובות, ללכת לים, לשמוע ולספר סיפורים</p>
+<p>סבתא שלי נולדה בלוב  בשנת 1933. היא עלתה לארץ ב1948 וגרה בקיבוץ יגור לאחר שעלתה. לאחר שדודתי נולדה, היא עברה לרמת גן שם אמא שלי נולדה. סבתר שלי מאוד אוהבת לבשל, לאכול במסעדות טובות, ללכת לים, לשמוע ולספר סיפורים</p>
 
 <h1><a name="myphotos">My Photos</a></h1>
 <h1>
@@ -76,23 +78,18 @@
 <p> לעומת זאת, בגרסא השנייה של האינטרט המשתמש יכול לכתוב ולבצע חיפוש עבור מתכונים במנוע חיפוש</p>
 <p>בגרסא השלישית של האינטרנט מנוע החיפוש ישלים אוטומטית את שאילתת המחפש ל"מתכונים" ויחזיר בהסתברות גבוה את המתכונים הרלוונטיים עבורו</p>
 <h1><a name="contactme">Contact Me</a></h1>
-<h1>
-<div class="dropdown">
-  <span>Mouse over me</span>
-  <div class="dropdown-content">
-    <button id="button1">&#128512;</button>
-    <button>&#128511;</button>
-    <button>&#128513;</button>
-  </div>
-</div>
-<p>please follow the orders:</p>
-<textarea>please enter here your email</textarea>
-<textarea id="message">please enter here your message</textarea>
-<input class="emojify" type="text" /><input>
- <span id="button">Add Emoji</span>
-<button>send mail</button>
-</h1>
-  
+ 
+<form action="mailto:fono@post.bgu.ac.il" method="post" enctype="text/plain">
+  Name:<br>
+  <input type="text" name="name"><br>
+  E-mail:<br>
+  <input type="text" name="mail"><br>
+  Comment:<br>
+  <input id="textarea" type="text" name="comment" size="50"><br><br>
+  <input type="submit" value="Send">
+  <input type="reset" value="Reset">
+ 
+</form>
 
 
 </body>
