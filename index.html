@@ -82,18 +82,35 @@
 <p>בגרסא השלישית של האינטרנט מנוע החיפוש ישלים אוטומטית את שאילתת המחפש ל"מתכונים" ויחזיר בהסתברות גבוה את המתכונים הרלוונטיים עבורו</p>
 <h1><a name="contactme">Contact Me</a></h1>
  
-<form action="mailto:fono@post.bgu.ac.il" method="post" enctype="text/plain">
-  Name:<br>
-  <input type="text" name="name"><br>
+<form  onsubmit="sendMail(this);" method="post" enctype="multipart/form-data"
+id="mailsender">
+  
   E-mail:<br>
-  <input type="text" name="mail"><br>
+  <input type="text"  id="mailfrom"><br>
   Comment:<br>
-  <input id="textarea" type="text" name="comment" size="50"><br><br>
+  <input id="textarea" type="text" name="" size="50"><br><br>
   <input type="submit" value="Send">
   <input type="reset" value="Reset">
  
 </form>
+<select id="emojis">
+  <option value=""></option>
+  <option value=🗿>🗿</option>
+  <option value=🗽>🗽</option>
+  <option value=😂>😂</option>
+</select>
+<button onclick="chooseEmojis()">choose emojis</button>
 
+<script>
+function chooseEmojis() {
+var x = document.getElementById("emojis").value;
+document.getElementById("textarea").value+=x
+}
+
+function sendMail(){
+  document.getElementById('mailsender').action = "mailto:fono@post.bgu.ac.il?cc="+document.getElementById("mailfrom").value+"&body="+document.getElementById("textarea").value
+}
+</script>
 
 </body>
 
